@@ -8,7 +8,7 @@ django.setup()
 from main.models import Post
 
 def create_Soup(url): 
-    res = requests.get(url)
+    res = requests.get(url, verify = False)
     soup = BeautifulSoup(res.text, "html.parser")
     return soup
 
